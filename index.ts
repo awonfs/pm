@@ -8,7 +8,7 @@ import { deletePost } from "./controllers/deletePost";
 import { getPost } from "./controllers/getPost";
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/posts", getPosts);
 app.get("/post/:id", getPost);
