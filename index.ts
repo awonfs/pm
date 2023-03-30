@@ -1,6 +1,7 @@
 import express from "express";
 const app = express();
 const PORT = 5000;
+
 import { getPosts } from "./controllers/getPosts";
 import { createPost } from "./controllers/createPost";
 import { deletePost } from "./controllers/deletePost";
