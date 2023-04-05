@@ -1,4 +1,5 @@
 import express from "express";
+const cors = require("cors");
 const app = express();
 const PORT = 5000;
 
@@ -9,6 +10,7 @@ import { getPost } from "./controllers/getPost";
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 app.get("/posts", getPosts);
 app.get("/post/:id", getPost);
